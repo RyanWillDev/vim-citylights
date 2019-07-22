@@ -33,7 +33,7 @@ hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
 hi Character ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#41505e guibg=NONE gui=NONE
 hi Conditional ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi Define ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi DiffAdd ctermfg=67 ctermbg=64 cterm=bold guifg=#718ca1 guibg=#44830e gui=bold
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#890709 guibg=NONE gui=NONE
