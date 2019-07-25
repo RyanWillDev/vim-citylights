@@ -30,7 +30,7 @@ hi IncSearch ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NO
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 hi Folded ctermfg=59 ctermbg=16 cterm=NONE guifg=#41505e guibg=#1d252c gui=NONE
-hi SpellBad ctermfg=red ctermbg=NONE cterm=NONE guifg=red guibg=NONE gui=undercurl
+hi SpellBad ctermfg=88 ctermbg=NONE cterm=NONE guifg=#890709  guibg=NONE gui=undercurl
 
 hi Normal ctermfg=67 ctermbg=16 cterm=NONE guifg=#718ca1 guibg=#1d252c gui=NONE
 hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
@@ -39,7 +39,7 @@ hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#41505e guibg=NONE gui=NONE
 hi Conditional ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi DiffAdd ctermfg=67 ctermbg=64 cterm=bold guifg=#008b94 guibg=#44830e gui=bold
+hi DiffAdd ctermfg=67 ctermbg=64 cterm=bold guifg=#8bd49c guibg=#44830e gui=bold
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#890709 guibg=NONE gui=NONE
 hi DiffChange ctermfg=67 ctermbg=23 cterm=NONE guifg=#539afc guibg=#1e385a gui=NONE
 hi DiffText ctermfg=67 ctermbg=24 cterm=bold guifg=#718ca1 guibg=#204a87 gui=bold
@@ -84,7 +84,7 @@ hi rubyRegexpDelimiter ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NO
 hi rubyEscape ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 hi rubyControl ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi rubyClassVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi rubyOperator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+" hi rubyOperator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi rubyException ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi rubyPseudoVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
 hi rubyRailsUserClass ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
