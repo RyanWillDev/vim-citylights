@@ -66,7 +66,7 @@ hi Type ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 " Elixir
-hi elixirAtom ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+hi elixirAtom ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 
 " Ruby 
 hi rubyClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
