@@ -120,3 +120,6 @@ hi cssClassName ctermfg=80 ctermbg=NONE cterm=NONE guifg=#70e1e8 guibg=NONE gui=
 hi cssValueLength ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=152 ctermbg=NONE cterm=NONE guifg=#b7c5d3 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+" Vimwiki
+hi VimwikiLink ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
