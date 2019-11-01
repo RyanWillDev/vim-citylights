@@ -59,13 +59,36 @@ let s:colors = {
 
 let g:colors_name = "citylights"
 
+function! s:AddHighlight(args)
+  exec 'highlight ' . join(a:args, ' ')
+endfunction
+
+function! s:Highlight(group, fg_color, ...)
+  " optional args bg_color, reverse
+  let pieces = [a:group]
+
+  if a:fg_color !=# ''
+   let pieces = add(pieces, 'guifg=' . s:colors[a:fg_color])
+  endif
+
+  if a:0 > 0 && a:1 !=# ''
+    let pieces = add(pieces, 'guibg=' . s:colors[a:bg_color])
+  endif
+
+  if a:0 > 1 && a:2 == 1
+    let pieces = add(pieces, 'gui=reverse')
+  endif
+
+  call s:AddHighlight(pieces)
+endfunction
+
 hi Cursor ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
 hi Visual ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2d3741 gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi LineNr ctermfg=59 ctermbg=17 cterm=NONE guifg=#475967 guibg=#252f38 gui=NONE
-hi CursorLineNr guifg=#5ec4ff guibg=NONE gui=reverse ctermfg=251 ctermbg=NONE cterm=reverse
+call s:Highlight('CursorLineNr', 'blue', '', 1)
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#35434e guibg=#35434e gui=NONE
 hi MatchParen ctermfg=81 ctermbg=NONE cterm=underline guifg=#5ec4ff guibg=NONE gui=underline
 hi StatusLine ctermfg=67 ctermbg=59 cterm=bold guifg=#718ca1 guibg=#35434e gui=bold
@@ -116,7 +139,7 @@ hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gu
 hi elixirAtom ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 hi elixirInterpolationDelimiter ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
 
-" Ruby 
+" Ruby
 hi rubyClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi rubyFunction ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
@@ -134,7 +157,7 @@ hi rubyControl ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=N
 hi rubyClassVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
 " hi rubyOperator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi rubyException ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi rubyPseudoVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
+call s:Highlight('rubyPseudoVariable', 'blue')
 hi rubyRailsUserClass ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
 hi rubyRailsARAssociationMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
 hi rubyRailsARMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
