@@ -8,7 +8,54 @@ if exists("syntax_on")
   syntax reset
 endif
 
-" light_blue = #5ec4ff 
+" lighter_blue = #5ec4ff
+
+" blue_black = #1d252c
+" gray_black = #2d3741
+" darker_gray_black = #2d3741
+" darkest_gray_black = #35434e
+"
+" lighter_blue_gray = #718ca1
+" blue_gray = #475967
+
+" Official Colors
+" color1light: #70E1E8;
+" color1medium: #33CED8;
+" color1dark: #008B94;
+
+" color2light: #5EC4FF;
+" color2medium: #68A1F0;
+" color2dark: #539AFC;
+
+" color3light:#E27E8D;
+" color3medium:#D95468;
+" color3dark:#B62D65;
+
+" color4light: #EBBF83;
+" color4dark: #D98E48;
+
+" color5light: #8BD49C;
+
+" color6dark: #718CA1;
+
+" color7light: #8BD49C;
+
+" Thanks to @whatyouhide for the inspiration to use a function https://github.com/whatyouhide/vim-gotham/blob/master/colors/gotham.vim
+let s:colors = {
+      \'cyan': '#70E1E8' ,
+      \'blue': '#5EC4FF',
+      \'purple': '#B62D65',
+      \'pink': '#E27E8D',
+      \'yellow': '#E27E8D',
+      \'green': '#E27E8D',
+      \'red': '#E27E8D',
+      \'orange': '#E27E8D',
+      \'gray': '#41505E',
+      \'very-light-gray': '#B7C5D3',
+      \'light-gray': '#718CA1',
+      \'dark-gray': '#333F4A',
+      \'very-dark-gray': '#1D252C'
+      \}
 
 let g:colors_name = "citylights"
 
