@@ -54,7 +54,10 @@ let s:colors = {
       \'very-light-gray': '#B7C5D3',
       \'light-gray': '#718CA1',
       \'dark-gray': '#333F4A',
-      \'very-dark-gray': '#1D252C'
+      \'very-dark-gray': '#1D252C',
+      \'NONE': 'NONE',
+      \'dark': '#35434E',
+      \'darkest': '#252F38',
       \}
 
 let g:colors_name = "citylights"
@@ -64,7 +67,7 @@ function! s:AddHighlight(args)
 endfunction
 
 function! s:Highlight(group, fg_color, ...)
-  " optional args bg_color, reverse
+  " optional args bg_color, gui
   let pieces = [a:group]
 
   if a:fg_color !=# ''
@@ -72,35 +75,35 @@ function! s:Highlight(group, fg_color, ...)
   endif
 
   if a:0 > 0 && a:1 !=# ''
-    let pieces = add(pieces, 'guibg=' . s:colors[a:bg_color])
+    let pieces = add(pieces, 'guibg=' . s:colors[a:1])
   endif
 
-  if a:0 > 1 && a:2 == 1
-    let pieces = add(pieces, 'gui=reverse')
+  if a:0 > 1 && a:2 !=# ''
+    let pieces = add(pieces, 'gui='. a:2)
   endif
 
   call s:AddHighlight(pieces)
 endfunction
 
-call s:Highlight('Cursor', 'light-gray')
-hi Visual ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2d3741 gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
-hi ColorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
-hi LineNr ctermfg=59 ctermbg=17 cterm=NONE guifg=#475967 guibg=#252f38 gui=NONE
-call s:Highlight('CursorLineNr', 'blue', '', 1)
-hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#35434e guibg=#35434e gui=NONE
-hi MatchParen ctermfg=81 ctermbg=NONE cterm=underline guifg=#5ec4ff guibg=NONE gui=underline
-hi StatusLine ctermfg=67 ctermbg=59 cterm=bold guifg=#718ca1 guibg=#35434e gui=bold
-hi StatusLineNC ctermfg=67 ctermbg=59 cterm=NONE guifg=#718ca1 guibg=#35434e gui=NONE
-hi Pmenu ctermfg=67 ctermbg=59 cterm=bold guifg=#718ca1 guibg=#35434e gui=bold
-hi PmenuSel ctermfg=67 ctermbg=59 cterm=bold guifg=#718ca1 guibg=#35434e gui=bold,reverse
-hi WildMenu ctermfg=NONE ctermbg=None cterm=NONE guifg=#5ec4ff  guibg=NONE gui=reverse
-hi IncSearch ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
-hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi Directory ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-hi Folded ctermfg=59 ctermbg=16 cterm=NONE guifg=#41505e guibg=#1d252c gui=NONE
-hi SpellBad ctermfg=88 ctermbg=NONE cterm=NONE guifg=#890709  guibg=NONE gui=undercurl
+call s:Highlight('Cursor', 'gray')
+call s:Highlight('Visual', '', 'dark-gray', 'bold')
+call s:Highlight('CursorLine', '', 'darkest')
+call s:Highlight('CursorColumn', '', 'darkest')
+call s:Highlight('CursorLineNr', 'blue', '', 'reverse')
+call s:Highlight('LineNr', 'gray', 'darkest')
+call s:Highlight('VertSplit', 'gray', 'gray')
+call s:Highlight('MatchParen', 'blue', 'NONE', 'underline')
+call s:Highlight('StatusLine', 'light-gray', 'darkest', 'bold')
+call s:Highlight('StatusLineNC', 'dark-gray', 'light-gray')
+call s:Highlight('Pmenu', 'light-gray', 'dark')
+call s:Highlight('PmenuSel', 'light-gray', 'dark', 'reverse,bold')
+call s:Highlight('Search', 'blue', 'NONE', 'underline,bold')
+call s:Highlight('Folded', 'gray', 'darkest')
+call s:Highlight('SpellBad', 'red')
+call s:Highlight('Directory', 'green')
+"hi WildMenu ctermfg=NONE ctermbg=None cterm=NONE guifg=#5ec4ff  guibg=NONE gui=reverse
+"hi IncSearch ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
+"hi Directory ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 
 hi Normal ctermfg=67 ctermbg=16 cterm=NONE guifg=#718ca1 guibg=#1d252c gui=NONE
 hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
