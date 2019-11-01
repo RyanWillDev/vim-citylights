@@ -82,6 +82,7 @@ function! s:Highlight(group, fg_color, ...)
   call s:AddHighlight(pieces)
 endfunction
 
+call s:Highlight('Cursor', 'light-gray')
 hi Cursor ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
 hi Visual ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2d3741 gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
