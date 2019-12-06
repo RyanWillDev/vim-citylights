@@ -46,10 +46,11 @@ let s:colors = {
       \'blue': '#5EC4FF',
       \'purple': '#B62D65',
       \'pink': '#E27E8D',
-      \'yellow': '#E27E8D',
-      \'green': '#E27E8D',
-      \'red': '#E27E8D',
-      \'orange': '#E27E8D',
+      \'yellow': '#EBBF83',
+      \'green': '#8BD49C',
+      \'dark-green': '#008b94',
+      \'red': '#D95468',
+      \'orange': '#D98E48',
       \'gray': '#41505E',
       \'very-light-gray': '#B7C5D3',
       \'light-gray': '#718CA1',
@@ -105,49 +106,59 @@ call s:Highlight('Directory', 'green')
 "hi IncSearch ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
 "hi Directory ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
 
-hi Normal ctermfg=67 ctermbg=16 cterm=NONE guifg=#718ca1 guibg=#1d252c gui=NONE
-hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
-hi Character ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-hi Comment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#41505e guibg=NONE gui=NONE
-hi Conditional ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Define ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi DiffAdd ctermfg=67 ctermbg=64 cterm=bold guifg=#8bd49c guibg=#44830e gui=bold
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#890709 guibg=NONE gui=NONE
-hi DiffChange ctermfg=67 ctermbg=23 cterm=NONE guifg=#539afc guibg=#1e385a gui=NONE
-hi DiffText ctermfg=67 ctermbg=24 cterm=bold guifg=#718ca1 guibg=#204a87 gui=bold
-hi ErrorMsg ctermfg=218 ctermbg=167 cterm=NONE guifg=#febac5 guibg=#d95468 gui=NONE
-hi WarningMsg ctermfg=218 ctermbg=167 cterm=NONE guifg=#febac5 guibg=#d95468 gui=NONE
-hi Float ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
-hi Function ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
-hi Identifier ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008b94 guibg=NONE gui=NONE
-hi Keyword ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi Label ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi NonText ctermfg=23 ctermbg=17 cterm=NONE guifg=#2d3741 guibg=#212a32 gui=NONE
-hi Number ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
-hi Operator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi PreProc ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi Special ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi SpecialKey ctermfg=23 ctermbg=17 cterm=NONE guifg=#2d3741 guibg=#252f38 gui=NONE
-hi Statement ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi StorageClass ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008b94 guibg=NONE gui=NONE
-hi String ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi Tag ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008b94 guibg=NONE gui=NONE
-hi Title ctermfg=67 ctermbg=NONE cterm=bold guifg=#718ca1 guibg=NONE gui=bold
-hi Todo ctermfg=59 ctermbg=NONE cterm=inverse,bold guifg=#539afc guibg=NONE gui=inverse,bold
-hi Type ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+call s:Highlight('Normal', 'light-gray', 'very-dark-gray')
+call s:Highlight('Boolean', 'pink')
+call s:Highlight('Character', 'yellow')
+call s:Highlight('Comment', 'gray')
+call s:Highlight('Conditional', 'blue')
+call s:Highlight('Constant', 'yellow')
+"hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+call s:Highlight('Define', 'blue')
+call s:Highlight('Float', 'pink')
+call s:Highlight('Function', 'cyan')
+call s:Highlight('Identifier', 'dark-green')
+call s:Highlight('Keyword', 'blue')
+call s:Highlight('Label', 'blue')
+call s:Highlight('NonText', 'dark', 'darkest')
+"hi NonText ctermfg=23 ctermbg=17 cterm=NONE guifg=#2d3741 guibg=#212a32 gui=NONE
+call s:Highlight('Number', 'pink')
+call s:Highlight('Operator', 'blue')
+call s:Highlight('PreProc', 'blue')
+call s:Highlight('Special', 'light-gray')
+call s:Highlight('SpecialKey', 'dark', 'darkest')
+call s:Highlight('Statement', 'blue')
+call s:Highlight('StorageClass', 'dark-green')
+call s:Highlight('String', 'blue')
+call s:Highlight('Tag', 'dark-green')
+call s:Highlight('Title', 'light-gray')
+call s:Highlight('Todo', 'blue', 'NONE', 'inverse,bold')
+call s:Highlight('Type', 'NONE', 'NONE', 'NONE')
+call s:Highlight('Underlined', 'NONE', 'NONE', 'underline')
+
+" Git
+call s:Highlight('DiffAdd', 'green')
+call s:Highlight('DiffDelete', 'red')
+call s:Highlight('DiffChange', 'yellow')
+call s:Highlight('DiffText', 'light-gray', 'darkest', 'bold')
+"hi DiffText ctermfg=67 ctermbg=24 cterm=bold guifg=#718ca1 guibg=#204a87 gui=bold
+
+" Messages in cmdline
+call s:Highlight('ErrorMsg', 'red', 'NONE')
+call s:Highlight('WarningMsg', 'yellow', 'NONE')
+call s:Highlight('MoreMsg', 'green', 'NONE')
+
 
 " Elixir
-hi elixirAtom ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-hi elixirInterpolationDelimiter ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
+call s:Highlight('elixirPseudoVariable', 'yellow')
+call s:Highlight('elixirAtom', 'green')
+call s:Highlight('elixirInterpolationDelimiter', 'cyan')
 
 " Ruby
 hi rubyClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi rubyFunction ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
+call s:Highlight('rubyFunction', 'cyan')
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi rubySymbol ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-hi rubyConstant ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
+"hi rubyConstant ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
 hi rubyStringDelimiter ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
 hi rubyBlockParameter ctermfg=180 ctermbg=NONE cterm=NONE guifg=#ebbf83 guibg=NONE gui=NONE
 hi rubyInstanceVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
@@ -195,4 +206,4 @@ hi cssCommonAttr ctermfg=152 ctermbg=NONE cterm=NONE guifg=#b7c5d3 guibg=NONE gu
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 " Vimwiki
-hi VimwikiLink ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+call s:Highlight('VimwikiLink', 'green')
