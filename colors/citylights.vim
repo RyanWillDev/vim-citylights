@@ -114,13 +114,15 @@ call s:Highlight('Conditional', 'blue')
 call s:Highlight('Constant', 'yellow')
 "hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 call s:Highlight('Define', 'blue')
+" Remove ~ from end of buffer
+call s:Highlight('EndOfbuffer', 'very-dark-gray')
 call s:Highlight('Float', 'pink')
 call s:Highlight('Function', 'cyan')
 call s:Highlight('Identifier', 'dark-green')
 call s:Highlight('Keyword', 'blue')
 call s:Highlight('Label', 'blue')
-call s:Highlight('NonText', 'dark', 'darkest')
-"hi NonText ctermfg=23 ctermbg=17 cterm=NONE guifg=#2d3741 guibg=#212a32 gui=NONE
+" For listchars
+call s:Highlight('NonText', 'pink', 'very-dark-gray')
 call s:Highlight('Number', 'pink')
 call s:Highlight('Operator', 'blue')
 call s:Highlight('PreProc', 'blue')
@@ -134,6 +136,7 @@ call s:Highlight('Title', 'light-gray')
 call s:Highlight('Todo', 'blue', 'NONE', 'inverse,bold')
 call s:Highlight('Type', 'NONE', 'NONE', 'NONE')
 call s:Highlight('Underlined', 'NONE', 'NONE', 'underline')
+call s:Highlight('WhiteSpace', 'pink', 'very-dark-gray')
 
 " Git
 call s:Highlight('DiffAdd', 'green')
