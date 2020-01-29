@@ -102,6 +102,8 @@ call s:Highlight('Search', 'blue', 'NONE', 'underline,bold')
 call s:Highlight('Folded', 'gray', 'darkest')
 call s:Highlight('SpellBad', 'red')
 call s:Highlight('Directory', 'green')
+call s:Highlight('TabLine', 'light-gray', 'darkest', 'bold')
+call s:Highlight('TabLineFill', 'dark-gray', 'light-gray')
 "hi WildMenu ctermfg=NONE ctermbg=None cterm=NONE guifg=#5ec4ff  guibg=NONE gui=reverse
 "hi IncSearch ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
 "hi Directory ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
