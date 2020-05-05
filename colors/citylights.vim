@@ -142,11 +142,9 @@ call s:Highlight('Underlined', 'NONE', 'NONE', 'underline')
 call s:Highlight('WhiteSpace', 'pink', 'very-dark-gray')
 
 " Git
-call s:Highlight('DiffAdd', 'green')
-call s:Highlight('DiffDelete', 'red')
-call s:Highlight('DiffChange', 'yellow')
-call s:Highlight('DiffText', 'light-gray', 'darkest', 'bold')
-"hi DiffText ctermfg=67 ctermbg=24 cterm=bold guifg=#718ca1 guibg=#204a87 gui=bold
+call s:Highlight('DiffAdd', 'green', 'darkest')
+call s:Highlight('DiffDelete', 'red', 'darkest')
+call s:Highlight('DiffChange', 'yellow',  'darkest')
 
 " Messages in cmdline
 call s:Highlight('ErrorMsg', 'red', 'NONE')
