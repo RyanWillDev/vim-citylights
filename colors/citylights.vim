@@ -158,32 +158,31 @@ call s:Highlight('elixirAtom', 'green')
 call s:Highlight('elixirInterpolationDelimiter', 'cyan')
 
 " Ruby
-hi rubyClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+call s:Highlight('rubyClass', 'blue')
 call s:Highlight('rubyFunction', 'cyan')
-hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubySymbol ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-"hi rubyConstant ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi rubyStringDelimiter ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi rubyBlockParameter ctermfg=180 ctermbg=NONE cterm=NONE guifg=#ebbf83 guibg=NONE gui=NONE
-hi rubyInstanceVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi rubyInclude ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi rubyGlobalVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi rubyRegexp ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi rubyRegexpDelimiter ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi rubyEscape ctermfg=115 ctermbg=NONE cterm=NONE guifg=#8bd49c guibg=NONE gui=NONE
-hi rubyControl ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi rubyClassVariable ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-" hi rubyOperator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
-hi rubyException ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+call s:Highlight('rubyInterpolationDelimiter', 'cyan')
+call s:Highlight('rubySymbol', 'green')
+call s:Highlight('rubyBlockParameter', 'yellow')
+call s:Highlight('rubyInstanceVariable', 'light-gray')
+call s:Highlight('rubyInclude', 'blue')
+call s:Highlight('rubyGlobalVariable', 'light-gray')
+call s:Highlight('rubyGlobalVariable', 'light-gray')
+call s:Highlight('rubyRegexp', 'blue')
+call s:Highlight('rubyRegexpDelimiter', 'blue')
+call s:Highlight('rubyEscape', 'green')
+call s:Highlight('rubyControl', 'blue')
+call s:Highlight('rubyClassVariable', 'light-gray')
+call s:Highlight('rubyException', 'blue')
 call s:Highlight('rubyPseudoVariable', 'blue')
-hi rubyRailsUserClass ctermfg=67 ctermbg=NONE cterm=NONE guifg=#718ca1 guibg=NONE gui=NONE
-hi rubyRailsARAssociationMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
-hi rubyRailsARMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
-hi rubyRailsRenderMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
-hi rubyRailsMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
-hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi erubyComment ctermfg=59 ctermbg=NONE cterm=NONE guifg=#41505e guibg=NONE gui=NONE
-hi erubyRailsMethod ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
+call s:Highlight('rubyRailsUserClass', 'light-gray')
+call s:Highlight('rubyRailsUserClass', 'light-gray')
+call s:Highlight('rubyRailsARAssociationMethod', 'cyan')
+call s:Highlight('rubyRailsARMethod', 'cyan')
+call s:Highlight('rubyRailsRenderMethod', 'cyan')
+call s:Highlight('rubyRailsMethod', 'cyan')
+call s:Highlight('erubyDelimiter', 'NONE', 'NONE')
+call s:Highlight('erubyComment', 'gray')
+call s:Highlight('erubyRailsMethod', 'cyan')
 
 " HTML
 hi htmlTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
