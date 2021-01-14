@@ -184,6 +184,10 @@ call s:Highlight('erubyDelimiter', 'NONE', 'NONE')
 call s:Highlight('erubyComment', 'gray')
 call s:Highlight('erubyRailsMethod', 'cyan')
 
+" Javascript
+call s:Highlight('jsNull', 'pink')
+call s:Highlight('jsUndefined', 'pink')
+
 " HTML
 hi htmlTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
